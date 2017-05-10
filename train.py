@@ -120,20 +120,21 @@ def save_torch_model(model, name):
 
 def train():
     data_loader = DataLoader(data_dir='datasets/hymenoptera_data', image_size=IMAGE_SIZE, batch_size=4)
-    # out = torchvision.utils.make_grid(inputs)
-    # data_loader.show_image(out, title=[data_loader.data_classes[c] for c in classes])
+    inputs, classes = next(iter(data_loader.load_data()))
+    out = torchvision.utils.make_grid(inputs)
+    data_loader.show_image(out, title=[data_loader.data_classes[c] for c in classes])
 
-    model = fine_tune_model()
-
-    criterion = nn.CrossEntropyLoss()
-    optimizer_ft = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
-    try:
-        model = train_model(data_loader, model, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)
-        save_torch_model(model, MODEL_SAVE_FILE)
-    except KeyboardInterrupt:
-        print('manually interrupt, try saving model for now...')
-        save_torch_model(model, MODEL_SAVE_FILE)
-        print('model saved.')
+    # model = fine_tune_model()
+    #
+    # criterion = nn.CrossEntropyLoss()
+    # optimizer_ft = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+    # try:
+    #     model = train_model(data_loader, model, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)
+    #     save_torch_model(model, MODEL_SAVE_FILE)
+    # except KeyboardInterrupt:
+    #     print('manually interrupt, try saving model for now...')
+    #     save_torch_model(model, MODEL_SAVE_FILE)
+    #     print('model saved.')
 
 
 def main():
