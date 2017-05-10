@@ -9,7 +9,7 @@ a very hight accuracy of classify on images!!!
 
 Some sample images as show below:
 
-![PicName](http://ofwzcunzi.bkt.clouddn.com/8JdcQVhXFSw3v86C.png)
+![PicName](http://ofwzcunzi.bkt.clouddn.com/sDI5zglmLxHYkwPs.png)
 
 The result shows as below:
 
