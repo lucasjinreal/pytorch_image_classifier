@@ -2,20 +2,20 @@
 
 ## Updates
 
-As for many users request, I released a new version of standared pytorch immage classification example at here: http://codes.strangeai.pro/aicodes_detail.html?id=30
+As for many users request, I released a new version of standard pytorch image classification example at here: http://codes.strangeai.pro/aicodes_detail.html?id=30
 
-It's more standared with **pytorch 1.0** support. It contains those features which is really useful to write a standared AI application:
+It works better with **pytorch 1.0** support. It contains those features which are really useful to write a standard AI application or bild an image classifier:
 
-- standared dataload to load data;
-- separate net work defination and data process code (less couple);
+- Loading Data using DataLoaders;
+- Network or model is less coupled with training and testing code (less couple);
 - catch keyboard interrupt and resume training.
 
 ## Less Than 200 Line Train Codes and 25 Epochs, Got 98% Accuracy!
 
-In this repo, I managed classify images into 2 kinds which is ants and
+In this repo, I managed classify images into 2 Categories which are ants and
 bees, but it's also very straightforward to train on more classes images.
 The amazing thing is, using PyTorch, we can use less than 200 line code to get
-a very hight accuracy of classify on images!!!
+a very highy accuracy of classificatio on images!!!
 
 
 ## Usage
@@ -30,9 +30,7 @@ To using this repo, some things you should to know:
 
 ## Future Work
 
-This version if fine tune on ResNet18, in the future maybe implement some own network,
-also fine tune on famous networks.
-As well as more datasets.
+This network could be used for other image dataset and by using transfer learning and fine tunning , you can get best results.
 
 ## Copyright
 
